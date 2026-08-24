@@ -1,7 +1,17 @@
 FROM localhost/scail2-inference:0.1.3
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends git ca-certificates \
+    && apt-get install -y --no-install-recommends \
+        ca-certificates \
+        curl \
+        git \
+        iproute2 \
+        libgl1 \
+        libglib2.0-0 \
+        lsof \
+        nano \
+        unzip \
+        wget \
     && rm -rf /var/lib/apt/lists/*
 
 RUN git clone \
